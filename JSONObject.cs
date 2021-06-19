@@ -891,17 +891,17 @@ public class JSONObject : IEnumerable {
 					builder.Append(i.ToString(CultureInfo.InvariantCulture));
 				} else {
 #if USEFLOAT
-					if(float.IsInfinity(n))
-						builder.Append(INFINITY);
-					else if(float.IsNegativeInfinity(n))
+					if(float.IsNegativeInfinity(n))
 						builder.Append(NEGINFINITY);
+					else if(float.IsInfinity(n))
+						builder.Append(INFINITY);
 					else if(float.IsNaN(n))
 						builder.Append(NaN);
 #else
-				if(double.IsInfinity(n))
-					builder.Append(INFINITY);
-				else if(double.IsNegativeInfinity(n))
+				if(double.IsNegativeInfinity(n))
 					builder.Append(NEGINFINITY);
+				else if(double.IsInfinity(n))
+					builder.Append(INFINITY);
 				else if(double.IsNaN(n))
 					builder.Append(NaN);
 #endif
@@ -1032,17 +1032,17 @@ public class JSONObject : IEnumerable {
 					builder.Append(i.ToString(CultureInfo.InvariantCulture));
 				} else {
 #if USEFLOAT
-					if(float.IsInfinity(n))
-						builder.Append(INFINITY);
-					else if(float.IsNegativeInfinity(n))
+					if(float.IsNegativeInfinity(n))
 						builder.Append(NEGINFINITY);
+					else if(float.IsInfinity(n))
+						builder.Append(INFINITY);
 					else if(float.IsNaN(n))
 						builder.Append(NaN);
 #else
-				if(double.IsInfinity(n))
-					builder.Append(INFINITY);
-				else if(double.IsNegativeInfinity(n))
+				if(double.IsNegativeInfinity(n))
 					builder.Append(NEGINFINITY);
+				else if(double.IsInfinity(n))
+					builder.Append(INFINITY);
 				else if(double.IsNaN(n))
 					builder.Append(NaN);
 #endif
